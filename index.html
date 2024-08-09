@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <!-- SVG icons declaration -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+        <symbol id="dropdown-arrow" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M1 1L13.2308 13.2308L25.4615 1" stroke="black"/>
+            <path d="M1 6.76923L13.2308 19L25.4615 6.76923" stroke="black"/>
+            <path d="M1 12.7692L13.2308 25L25.4615 12.7692" stroke="black"/>
+        </symbol>
+
+    </svg>
+
+
+
+
+
+
+    <section title="Lista de taredas">
+        <h1>LISTA DE TAREFAS</h1>
+        <div class="add-task-container">
+            <div>
+                ADICIONAR TAREFA
+                <svg viewBox="0 0 26 26"><use href="#dropdown-arrow"/></svg>
+            </div>
+
+            <form>
+                <div class="task-name-input-container">
+                    <label for="task-name">NOME DA TAREFA</label>
+                    <input type="text" name="task-name" id="task-name" required>
+                </div>
+                <div class="priority-container">
+                    <label for="">GRAU DE PRIORIDADE</label>
+                    <div>
+                        <input type="radio" name="priority-level" id="low-priority" value="low" checked>
+                        Baixo
+                        <div id="low-priority-color-box" class="priority-color-box"></div>
+                    </div>
+                    <div>
+                        <input type="radio" name="priority-level" id="medium-priority" value="medium">
+                        Médio
+                        <div id="medium-priority-color-box" class="priority-color-box"></div>
+                    </div>
+                    <div>
+                        <input type="radio" name="priority-level" id="high-priority" value="high">
+                        Alto
+                        <div id="high-priority-color-box" class="priority-color-box"></div>
+                    </div>
+                </div>
+                <div class="btn-container"><button>ADICIONAR</button></div>
+            </form>
+        </div>
+        
+        <h2>TAREFAS</h2>
+        <div class="tasks-container">
+            <ul>
+                <div class="task-item-container high-priority">
+                    <li class="task">
+                        Tarefa exemplo
+                    </li>
+                    <div class="task-priority-color-box"></div>
+                </div>
+
+            </ul>
+        </div>
+    </section>
+
+
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html> 

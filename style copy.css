@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 10.8% 28.25% 5.86% 1fr; */
+    /* grid-template-rows: 10.8% minmax(5.85%,28.25%) 5.86% 1fr; */
+    grid-template-rows: 10.8% auto 5.86% 1fr;
+    width: 568px;
+    height: 768px;
+    
+    background: #FEFDFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+
+    /* position: relative; */
+}
+h1 {
+    grid-row: 1;
+
+    font-size: 4rem;
+
+    text-align: center;
+    align-self: center;
+}
+.add-task-container {
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 20.74%;
+    max-height: 100%;
+
+    > button {
+        border: none;
+        outline: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        /* background: #FEFDFF; */
+        background-color: red;
+
+        font-size: 2rem;
+        height: 20.74%;
+        max-height: 100%;
+
+        svg {
+            height: 60%;
+            /* transform: rotateX(180deg); */
+        }
+    }
+
+    form {
+        display: none !important;
+        height: 100%;
+
+        background-color: #C1BFB5;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        padding: 0.75rem 0.25rem;
+
+        .task-name-input-container {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row: 1;
+
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            > label {
+                font-size: 1.5rem;
+            }
+
+            > input {
+                border: none;
+                outline: none;
+
+                height: 2rem;
+                font-size: 1.5rem;
+
+                background-color: #D9D9D9;
+            }
+        }
+
+        .priority-container {
+            grid-column: 1;
+            grid-row: 2;
+
+            height: 100%;
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 59%;
+
+            padding-top: 0.7rem;
+
+            > label {
+                grid-column-start: 1;
+                grid-column-end: 4;
+
+                font-size: 1.25rem;
+            }
+
+            > div {
+                /* height: 100%; */
+
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                background-color: #D9D9D9;
+
+                margin-right: 0.5rem;
+
+                /* Remove the radio checker */
+                input[type="radio"] {
+                    appearance: none;
+                }
+
+                .priority-color-box {
+                    height: 50%;
+                    aspect-ratio: 1;
+                }
+                #low-priority-color-box {
+                    background-color: green;
+                }
+                #medium-priority-color-box {
+                    background-color: orange;
+                }
+                #high-priority-color-box {
+                    background-color: red;
+                }
+            }
+        }
+
+        > .btn-container {
+            grid-column: 2;
+            grid-row: 2;
+
+            height: 100%;
+            width: 100%;
+
+            padding-top: 0.7rem;
+            padding-left: 5.375rem;
+
+            > button {
+                width: 100%;
+                height: 100%;
+
+                border: none;
+                outline: none;
+    
+                text-align: center;
+                font-size: 1.5rem;
+    
+                
+    
+                background-color: #D9D9D9;
+            }
+        }
+
+    }
+}
+h2 {
+    grid-row: 3;
+}
+.task-container {
+    grid-row: 4;
+
+}
+
+
+
+
